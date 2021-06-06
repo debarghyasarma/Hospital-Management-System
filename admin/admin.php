@@ -28,7 +28,7 @@
           >power_settings_new</i
         >
         <a
-          href="http://localhost/Hospital%20Management%20System/signin.php"
+          href="http://localhost/Hospital%20Management%20System/admin/signin.php"
           style="margin-left: 5px; font-weight: 500; color: white"
         >
           Logout
@@ -62,15 +62,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-light font-weight-normal">
+            <a href="patient.html" class="nav-link text-light font-weight-normal">
               <i class="material-icons" style="height: 4px">people</i>
               <p class="link3">Patient</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-light font-weight-normal">
+            <a href="http://localhost/Hospital%20Management%20System/admin/appointments-page.php"
+            class="nav-link text-light font-weight-normal">
               <i class="material-icons" style="height: 4px">today</i>
-              <p class="link4">Appointment</p>
+              <p class="link3">Appointments</p>
             </a>
           </li>
         </ul>
@@ -78,12 +79,12 @@
     </nav>
 
     <!-- Cards -->
-    <div class="cards-row" style="margin-left: 8px; margin-top: 20px">
+    <div class="cards-row" style="margin-right: 15px; margin-top: 30px; margin-right:15px">
       <div
         class="card"
         style="
-          width: 21rem;
-          margin-left: 240px;
+          width: 27rem;
+          margin-left: 270px;
           margin-top: 15px;
           height: 190px;
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
@@ -105,12 +106,12 @@
             <h5 class="text-light" style="margin-top: 55px">Total Doctors:</h5>
             <h3
               style="margin-left: 160px; margin-top: -44px"
-              class="text-light"
+              class="text-light" id="doc-count"
             >
               4
             </h3>
             <h6 class="text-light">Wants Approval:</h6>
-            <h6 style="margin-left: 165px; margin-top: -27px; color: white">
+            <h6 style="margin-left: 165px; margin-top: -27px; color: white" id="wapp_doc">
               1
             </h6>
           </div>
@@ -120,8 +121,8 @@
       <div
         class="card"
         style="
-          width: 21rem;
-          margin-left: 620.5px;
+          width: 27rem;
+          margin-left: 870px;
           margin-top: -189px;
           height: 190px;
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
@@ -144,113 +145,108 @@
             </h5>
             <h3
               style="margin-left: 194px; margin-top: -44px"
-              class="text-light"
+              class="text-light" id="patient-count"
             >
               4
             </h3>
             <h6 class="text-light">Wants to Admit:</h6>
-            <h6 style="margin-left: 160px; margin-top: -27px; color: white">
+            <h6 style="margin-left: 160px; margin-top: -27px; color: white"
+             id="wapp_patient">
               1
             </h6>
           </div>
         </div>
       </div>
-
-      <div
-        class="card"
-        style="
-          width: 21rem;
-          margin-left: 1001px;
-          margin-top: -189px;
-          height: 190px;
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
-          background: linear-gradient(rgb(137, 76, 194), rgb(255, 69, 255));
-        "
-      >
-        <div class="card-body">
-          <h5 class="card-title">Appointments</h5>
-          <div>
-            <img
-              src="appointmenticon.png"
-              alt="Avatar"
-              class="avatar"
-              style="float: right; margin-top: -35px; width: 70px"
-            />
-          </div>
-          <div style="margin-top: 45px">
-            <h5 class="text-light" style="margin-top: 55px">
-              Total Appointment:
-            </h5>
-            <h3
-              style="margin-left: 216px; margin-top: -44px"
-              class="text-light"
-            >
-              4
-            </h3>
-            <h6 class="text-light">Approve Appointments:</h6>
-            <h6 style="margin-left: 217px; margin-top: -27px; color: white">
-              1
-            </h6>
-          </div>
-        </div>
-      </div>
+    </div>
       <!-- Cards -->
 
       <!-- TABLE -->
-      <div class="doctor-bar">
-        <h6 class="text-light" style="margin-left: 155px; margin-top: 5px">
-          Recent Doctors
-        </h6>
+    <div class="table-section">
+        <div class="table-left">
+
+           <div class="doctor-bar">
+              <h6 class="text-light" style="margin-top: 5px; margin-left:150px">
+                 Doctors On Duty
+             </h6> 
+           </div>  
+            
+          <?php 
+            include("dbcon.php");
+            $sql = "SELECT firstname,lastname,specilization,mobile FROM doctor_register WHERE approve=1";
+		        $results = $conn->query($sql);
+
+            if ($results->num_rows>0) {
+            ?>
+        
+              <table class="doctor-table" border="1">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Mobile</th>
+                 </tr>
+              </thead>
+              <?php 
+                while($row = $results->fetch_assoc()) {
+               ?>
+              <tbody>
+                 <tr>
+                    <td style="font-size:13px "><?php echo $row['firstname']." ".$row['lastname']?></td>
+                    <td style="font-size:13px"><?php echo $row['specilization']?></td>
+                    <td style="font-size:13px"><?php echo $row['mobile']?></td>   
+                </tr> 
+             </tbody>
+             <?php			
+               }
+              }  
+              ?>         
+             </table>
+        
+       </div>
+
+
+      <div class="table-right">    
+          <div class="patient-bar">
+               <h6 class="text-light" style="margin-left: 140px; margin-top: 5px">
+                 Patients Allocated Beds
+               </h6>
+          </div>
+          <?php
+            include("dbcon.php");
+            $sql = "SELECT firstname,lastname,doctor_assigned,mobile,symptoms,address FROM patient_register WHERE approve=1 AND discharge=0";
+		        $results = $conn->query($sql);
+
+             if ($results->num_rows>0) {
+           ?>
+           
+         <table class="patient-table" border="1">
+           <thead>
+             <tr>
+               <th>Name</th>
+               <th>Symptoms</th> 
+               <th>Mobile</th>
+               <th>Address</th>
+             </tr>
+          </thead>
+          <?php 
+            while($row = $results->fetch_assoc()) {
+          ?>
+          <tbody>
+             <tr>
+               <td style="font-size:13px "><?php echo $row['firstname']." ".$row['lastname']?></td>
+               <td style="font-size:13px"><?php echo $row['symptoms']?></td>
+               <td style="font-size:13px"><?php echo $row['mobile']?></td>
+               <td style="font-size:13px"><?php echo $row['address']?></td>
+             </tr>
+          </tbody>
+          <?php			
+            }
+          }  
+            ?>  
+          </table>  
       </div>
-
-      <table class="doctor-table" border="1" id="doctor-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Department</th>
-            <th>Mobile</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td style="font-size: 13px">Dom</td>
-            <td style="font-size: 13px">6000</td>
-            <td style="font-size: 13px">656565</td>
-            <td style="font-size: 13px">On duty</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="patient-bar">
-        <h6 class="text-light" style="margin-left: 155px; margin-top: 5px">
-          Recent Patients
-        </h6>
-      </div>
-      <table class="patient-table" border="1">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Symptoms</th>
-            <th>Address</th>
-            <th>Mobile</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Dom</td>
-            <td>6000</td>
-            <td>656565</td>
-            <td>fgfgfgf</td>
-            <td>4g4g4g4</td>
-          </tr>
-        </tbody>
-      </table>
+    
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -266,17 +262,8 @@
       integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
       crossorigin="anonymous"
     ></script>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      class="bi bi-bag-fill"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"
-      />
-    </svg>
+    <script src="admin-doctors.js"></script>
+    <script src="admin-patient.js"></script>
   </body>
+
 </html>

@@ -1,0 +1,172 @@
+.navbar {
+  background-color: #00ec6e;
+  height: 45px;
+}
+.navbar-heading {
+  font-weight: 500;
+  margin-left: 230px;
+  padding-top: 6px;
+}
+.vertical-nav {
+  width: 14rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  background-color: #00b5ec;
+}
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 76px;
+  margin-top: 40px;
+}
+.media-body {
+  margin-left: 78px;
+  margin-top: 25px;
+}
+.admin-name {
+  margin-left: 69px;
+  margin-top: 20px;
+}
+
+.flex-column {
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+.link1 {
+  margin-top: 1px;
+  margin-left: 26px;
+}
+.link2 {
+  margin-top: -2px;
+  margin-left: 24px;
+}
+.link3 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+.link4 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.doctor-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  float: left;
+  width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 270px;
+  margin-top: 0px;
+  width: 450px;
+  overflow-y: scroll;
+}
+
+.doctor-table thead tr {
+  background-color: white;
+  color: #000;
+  text-align: left;
+}
+
+.doctor-table th,
+.doctor-table td {
+  padding: 12px 15px;
+}
+
+.doctor-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.doctor-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.doctor-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.doctor-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.doctor-bar {
+  width: 450px;
+  margin-top: 65px;
+  padding: 0.25em 0.625em;
+  background-color: rgb(72, 72, 175);
+  margin-left: 270px;
+}
+
+.patient-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 850px;
+  margin-top: 0px;
+  width: 450px;
+}
+
+.patient-table thead tr {
+  background-color: white;
+  color: #000;
+  text-align: left;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 12px 15px;
+}
+
+.patient-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.patient-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.patient-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.patient-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.patient-bar {
+  width: 450px;
+  margin-top: -80px;
+  padding: 0.25em 0.625em;
+  background-color: rgb(72, 72, 175);
+  margin-left: 850px;
+}
+
+.table-section {
+  margin-top: 10px;
+}
+.table-left {
+  margin-top: 20px;
+}
+.table-right {
+  margin-top: 40px;
+}
+/* .pane {
+  overflow-y: scroll;
+  max-height: 200px;
+} */

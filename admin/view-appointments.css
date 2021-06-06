@@ -1,0 +1,121 @@
+.navbar {
+  background-color: #00ec6e;
+  height: 45px;
+}
+.navbar-heading {
+  font-weight: 500;
+  margin-left: 230px;
+  padding-top: 6px;
+}
+.vertical-nav {
+  width: 14rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  background-color: #00b5ec;
+}
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 76px;
+  margin-top: 40px;
+}
+.media-body {
+  margin-left: 78px;
+  margin-top: 25px;
+}
+.doctor-name {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.flex-column {
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+.link1 {
+  margin-top: 1px;
+  margin-left: 26px;
+}
+.link2 {
+  margin-top: -2px;
+  margin-left: 24px;
+}
+.link3 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+.link4 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+
+.nav-link {
+  margin-left: -5px;
+}
+.admin-name {
+  margin-left: 67px;
+  margin-top: 20px;
+}
+
+.patient-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 400px;
+  margin-top: 0px;
+  width: 650px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.patient-table thead tr {
+  background-color: white;
+  color: #000;
+  text-align: center;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 12px 15px;
+}
+
+.patient-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.patient-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.patient-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.patient-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.patient-bar {
+  width: 650px;
+  margin-top: 100px;
+  padding: 0.25em 0.625em;
+  background-color: rgb(72, 72, 175);
+  margin-left: 400px;
+}
+
+.app-bar {
+  width: 80px;
+  background-color: rgb(41, 177, 86);
+  margin-left: 22px;
+  margin-right: -30px;
+}

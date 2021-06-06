@@ -30,8 +30,8 @@
   margin-left: 78px;
   margin-top: 25px;
 }
-.admin-name {
-  margin-left: 69px;
+.doctor-name {
+  margin-left: 50px;
   margin-top: 20px;
 }
 
@@ -57,55 +57,8 @@
   margin-top: -3px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-.doctor-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-left: 270px;
-  margin-top: 0px;
-  width: 450px;
-}
-
-.doctor-table thead tr {
-  background-color: white;
-  color: #000;
-  text-align: left;
-}
-
-.doctor-table th,
-.doctor-table td {
-  padding: 12px 15px;
-}
-
-.doctor-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.doctor-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.doctor-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-.doctor-table tbody tr:hover {
-  background-color: #f5f5f5;
-}
-
-.doctor-bar {
-  width: 450px;
-  margin-top: 40px;
-  padding: 0.25em 0.625em;
-  background-color: rgb(72, 72, 175);
-  margin-left: 270px;
+.nav-link {
+  margin-left: -5px;
 }
 
 .patient-table {
@@ -113,17 +66,18 @@
   margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-left: 850px;
+  margin-left: 400px;
   margin-top: 0px;
-  width: 450px;
+  width: 650px;
+  overflow-y: scroll;
+  text-align: center;
 }
 
 .patient-table thead tr {
   background-color: white;
   color: #000;
-  text-align: left;
+  text-align: center;
 }
 
 .patient-table th,
@@ -148,9 +102,9 @@
 }
 
 .patient-bar {
-  width: 450px;
-  margin-top: -147px;
+  width: 650px;
+  margin-top: 100px;
   padding: 0.25em 0.625em;
   background-color: rgb(72, 72, 175);
-  margin-left: 850px;
+  margin-left: 400px;
 }

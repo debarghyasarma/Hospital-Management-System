@@ -9,48 +9,30 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="signin.css" />
-    <title>Admin Login Page</title>
+    <link rel="stylesheet" href="doctorlogin.css" />
+    <title>Doctor Login Page</title>
   </head>
   <body class="body">
 
   <?php
    include ("dbcon.php");
-   if(isset($_POST) && !empty($_POST)) {
-       $email = addslashes(strip_tags($_POST['email']));
-       $password = addslashes(strip_tags($_POST['password']));
+   if(isset($_POST['submit']) && !empty($_POST['submit'])) {
 
-      $sql = "INSERT INTO admin_signup (emailid,password) 
-      VALUES('".$email."','".$password."')";
-
-      session_start();
-      /* if($conn->query($sql))
-       {
-           $_SESSION['signup'] = 1;
-          header('Location: admin.html'); 
-       }
-       else
-           $_SESSION['signup'] = 0; */
-
-     $sqlselect = "SELECT * FROM admin_signup WHERE emailid = '".$email."'";
-     $result = $conn->query($sqlselect);
+     $email = addslashes(strip_tags($_POST['email']));
+     $password = addslashes(strip_tags($_POST['password']));
     
+     $sql = "SELECT email FROM doctor_register WHERE email = '".$email."'";
+     $result = $conn->query($sql);
+     session_start();
      if($result->num_rows>0)
      {
-      $row = $result->fetch_assoc();
-      $_SESSION['user'] == $row;
-      if ($row['emailid'] == $email)
-      {
-        // $_SESSION['user'] == 1;
-         $_SESSION['user'] == $row;
-         header('Location: admin.html');
-      }
-      else{
-         $_SESSION['user'] = "";
-        // $_SESSION['row'] = "";
-      }
+      $user = $result->fetch_assoc();
+      $_SESSION['user'] == $user;
+      header('Location: http://localhost/Hospital%20Management%20System/doctors/doctor-dashboard.php?email='.$email.'');
      }
-
+     else{
+       $_SESSION['user'] = "";
+     } 
    }
 
   ?>
@@ -105,10 +87,11 @@
       <div class="signin-card">
         <div id="card-content">
           <div id="card-title">
-            <h2>ADMIN LOGIN</h2>
+            <h2>DOCTOR LOGIN</h2>
             <div class="underline-title"></div>
           </div>
-          <form method="post" class="form">
+          <form method="post" class="form" id="loginform" action="">
+          <!-- <div class="form" method="post">  -->
             <label for="user-email" style="padding-top: 13px">
               &nbsp;Email
             </label>
@@ -143,23 +126,21 @@
                 Signup
               </legend>
             </a>
-            <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+            <input id="submit-btn" type="submit" name="submit" value="LOGIN" class="submit" />
+          <!-- </div>  -->
           </form>
         </div>
       </div>
     </div>
 
-    <!-- If email is wrong -->
-    <?php 
-  //isset($_SESSION['user']) && $_SESSION['user'] == 0
-    if(isset($_SESSION['user']) && $_SESSION['user'] == 0 ) { ?> 
-                  
+    <?php if(isset($_SESSION['user']) && $_SESSION['user'] == 0) { ?>              
       <div class="alert alert-danger">
-           <strong style="margin-left : 525px;">Sorry! You are not the Admin!!</strong> 
-      </div>
-						 
-    <?php } ?>
-  
+         <strong style="margin-left:530px">Sorry! </strong>You are not a Doctor!!
+      </div>              
+     <?php } ?>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!-- <script src="doctorlogin.js"></script>   -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

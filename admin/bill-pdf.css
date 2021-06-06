@@ -1,0 +1,38 @@
+.bill {
+  margin: 50px;
+}
+
+.form-section {
+  margin-left: 90px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.patient-details {
+  margin: 30px;
+}
+
+.items {
+  width: 200x;
+  margin-top: 20px;
+  padding: 0.25em 0.625em;
+  background-color: rgb(211, 211, 211);
+  margin-left: 250px;
+  margin-right: 215px;
+}
+
+.bill-left {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+
+.bill-right {
+  margin-left: 700px;
+  margin-top: -107px;
+}
+
+hr.line {
+  border: 1px solid black;
+  width: 336px;
+  margin-left: 300px;
+}

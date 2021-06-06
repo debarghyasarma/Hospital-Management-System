@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doctors</title>
+    <title>Patients</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -49,7 +49,7 @@
           <ul class="nav flex-column mb-0">
             <li class="nav-item">
               <a
-                href="admin.html"
+                href="http://localhost/Hospital%20Management%20System/admin/admin.php"
                 class="nav-link text-light font-weight-normal"
               >
                 <i class="material-icons" style="height: 0px">dashboard</i>
@@ -57,7 +57,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-light font-weight-normal">
+              <a
+                href="doctor.html"
+                class="nav-link text-light font-weight-normal"
+              >
                 <i class="material-icons" style="height: 4px">medication</i>
                 <p class="link2">Doctor</p>
               </a>
@@ -69,9 +72,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-light font-weight-normal">
+              <a href="" class="nav-link text-light font-weight-normal">
                 <i class="material-icons" style="height: 4px">today</i>
-                <p class="link4">Appointment</p>
+                <p class="link3">Appointments</p>
               </a>
             </li>
           </ul>
@@ -80,13 +83,13 @@
       <!-- Cards -->
       <div class="cards-row" style="margin-left: 20px; margin-top: 35px">
         <a
-          href="http://localhost/Hospital%20Management%20System/doctor-record.php"
+          href="http://localhost/Hospital%20Management%20System/admin/patient-record.php"
           style="text-decoration: none"
         >
           <div
             class="card"
             style="
-              width: 15rem;
+              width: 17rem;
               margin-left: 240px;
               margin-top: 25px;
               height: 145px;
@@ -98,11 +101,11 @@
             "
           >
             <div class="card-body">
-              <h5 class="card-title text-light">Doctor Record</h5>
+              <h5 class="card-title text-light">Patient Record</h5>
 
               <div>
                 <img
-                  src="doctoricon.png"
+                  src="patienticon.png"
                   alt="Avatar"
                   class="avatar"
                   style="
@@ -110,7 +113,7 @@
                     margin-top: 35px;
                     width: 35px;
                     height: 30px;
-                    margin-right: 160px;
+                    margin-right: 195px;
                   "
                 />
               </div>
@@ -119,13 +122,13 @@
         </a>
 
         <a
-          href="http://localhost/Hospital%20Management%20System/registerdoc.php"
+          href="http://localhost/Hospital%20Management%20System/admin/showunapp-patient.php"
         >
           <div
             class="card"
             style="
-              width: 15rem;
-              margin-left: 520px;
+              width: 17rem;
+              margin-left: 643px;
               margin-top: -145px;
               height: 145px;
               box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
@@ -134,11 +137,11 @@
             id="register"
           >
             <div class="card-body">
-              <h5 class="card-title text-light">Register Doctor</h5>
+              <h5 class="card-title text-light">Approve Patient</h5>
 
               <div>
                 <img
-                  src="add.png"
+                  src="tick.png"
                   alt="Avatar"
                   class="avatar"
                   style="
@@ -146,7 +149,7 @@
                     margin-top: 35px;
                     width: 35px;
                     height: 30px;
-                    margin-right: 160px;
+                    margin-right: 195px;
                   "
                 />
               </div>
@@ -154,76 +157,44 @@
           </div>
         </a>
 
-        <div
-          class="card"
-          style="
-            width: 15rem;
-            margin-left: 799px;
-            margin-top: -145px;
-            height: 145px;
-            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
-            background: linear-gradient(rgb(255, 134, 63), rgb(255, 134, 63));
-          "
+        <a
+          href="http://localhost/Hospital%20Management%20System/admin/discharge-patient.php"
+          style="text-decoration: none"
         >
-          <div class="card-body">
-            <h5 class="card-title text-light">Approve Doctor</h5>
+          <div
+            class="card"
+            style="
+              width: 17rem;
+              margin-left: 1040px;
+              margin-top: -145px;
+              height: 145px;
+              box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+              background: rgb(255, 88, 88);
+            "
+          >
+            <div class="card-body">
+              <h5 class="card-title text-light">Discharge Patient</h5>
 
-            <div>
-              <img
-                src="tick.png"
-                alt="Avatar"
-                class="avatar"
-                style="
-                  float: right;
-                  margin-top: 35px;
-                  width: 35px;
-                  height: 30px;
-                  margin-right: 160px;
-                "
-              />
+              <div>
+                <img
+                  src="specilization.png"
+                  alt="Avatar"
+                  class="avatar"
+                  style="
+                    float: right;
+                    margin-top: 35px;
+                    width: 35px;
+                    height: 30px;
+                    margin-right: 195px;
+                  "
+                />
+              </div>
             </div>
           </div>
-          <a href="registerdoc.html" class="stretched-link"></a>
-        </div>
-
-        <div
-          class="card"
-          style="
-            width: 15rem;
-            margin-left: 1080px;
-            margin-top: -145px;
-            height: 145px;
-            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
-            background: rgb(255, 88, 88);
-          "
-        >
-          <div class="card-body">
-            <h5 class="card-title text-light">Doctor Specilization</h5>
-
-            <div>
-              <img
-                src="specilization.png"
-                alt="Avatar"
-                class="avatar"
-                style="
-                  float: right;
-                  margin-top: 35px;
-                  width: 35px;
-                  height: 30px;
-                  margin-right: 160px;
-                "
-              />
-            </div>
-          </div>
-        </div>
+        </a>
       </div>
       <!-- Cards -->
     </div>
-
-    <!-- <script> -->
-    <!-- document.getElementById("register").onclick = window.location.href = -->
-    <!-- "registerdoc.html"; -->
-    <!-- </script> -->
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

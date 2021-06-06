@@ -1,0 +1,96 @@
+.navbar {
+  background-color: #00ec6e;
+}
+.navbar-heading {
+  font-weight: 500;
+  margin-left: 230px;
+  margin-top: 7px;
+}
+.vertical-nav {
+  width: 14rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  background-color: #00b5ec;
+}
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 76px;
+  margin-top: 40px;
+}
+.media-body {
+  margin-left: 78px;
+  margin-top: 25px;
+}
+.admin-name {
+  margin-left: 69px;
+  margin-top: 20px;
+}
+
+.flex-column {
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+.link1 {
+  margin-top: 1px;
+  margin-left: 26px;
+}
+.link2 {
+  margin-top: -2px;
+  margin-left: 24px;
+}
+.link3 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+.link4 {
+  margin-left: 27px;
+  margin-top: -3px;
+}
+
+.submit-btn {
+  background-color: rgb(21, 21, 102);
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 25px;
+  transition: 0.25s;
+  width: 153px;
+}
+.submit-btn:hover {
+  box-shadow: 0px 1px 18px #2498c6;
+}
+.form-section {
+  margin-top: 50px;
+  margin-left: -280px;
+}
+.card {
+  margin-left: 420px;
+  margin-right: 200px;
+  margin-bottom: 50px;
+  margin-top: 60px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 670px;
+}
+.items {
+  width: 685px;
+  margin-top: 40px;
+  padding: 0.25em 0.625em;
+  background-color: rgb(211, 211, 211);
+  margin-left: 20px;
+}
+.label {
+  font-weight: initial;
+}
